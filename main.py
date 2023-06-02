@@ -1,4 +1,9 @@
 from random import randint
+import streamlit as st
+import pandas as pd
+
+st.set_page_config(layout="centered", page_icon="📄", page_title="Сессия")
+st.header('📄 Генератор билетов')
 
 geom = [
     '1. Группы преобразований и движений плоскости.',
@@ -71,10 +76,10 @@ algebra = [
     '23. Функция f(x) = arctg(x), f(x) = arcctg(x) их свойства и график. Тождества arctg(-a) = ..., arcctg(-a) = ..., '
     '(с доказательствами)',
 ]
+element = st.text('Нажмите кнопку, чтобы сгненерировать')
+col1, col2, col3 = st.columns(3)
+col2.empty()
+if col2.button('Сгенерировать билет'):
+    element.write(geom[randint(0, len(geom) - 1)] + '\n' + algebra[randint(0, len(algebra) - 1)])
 
-a = ''
-while True:
-    print('Твой билет')
-    print(geom[randint(0, len(geom) - 1)])
-    print(algebra[randint(0, len(algebra) - 1)])
-    input()
+
