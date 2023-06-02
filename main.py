@@ -85,4 +85,3 @@ first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra)
 if col2.button('Сгенерировать билет'):
     element1.write(geom[first_number])
     element2.write(algebra[second_number])
-g
