@@ -1,5 +1,9 @@
-# MathExamSimulator
+## 📄 Math Exam Simulator
 I'm helping you to stimulate the math exam
+![alt text](https://imgur.com/a/fht1V1c)
 
-# Examples
-![alt text](https://i.imgur.com/LjZmp2m.jpg)
+## How to run this demo
+```
+pip install --upgrade streamlit
+streamlit run https://raw.githubusercontent.com/imferie/MathExamSimulator/main/main.py
+```
