@@ -1,6 +1,6 @@
 ## 📄 Math Exam Simulator
 
-I'm helping you to stimulate the math exam
+I'm helping you simulate the math exam
 
 ![alt text](https://i.imgur.com/gpFg1Fu.png)
 
