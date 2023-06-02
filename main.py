@@ -71,9 +71,9 @@ algebra = [
     'произведение суммы синуса и косинуса (показать на примере).',
     '22. Функция f(x) = sin(x), f(x) = cos(x) их свойства и график.',
     '23. Функция f(x) = tg(x), f(x) = ctg(x) их свойства и график.',
-    '22. Функция f(x) = arcsin(x), f(x) = arccos(x) их свойства и график. Тождества arcsin(-a) = ..., arccos(-a) = '
+    '24. Функция f(x) = arcsin(x), f(x) = arccos(x) их свойства и график. Тождества arcsin(-a) = ..., arccos(-a) = '
     '..., (с доказательствами)',
-    '23. Функция f(x) = arctg(x), f(x) = arcctg(x) их свойства и график. Тождества arctg(-a) = ..., arcctg(-a) = ..., '
+    '25. Функция f(x) = arctg(x), f(x) = arcctg(x) их свойства и график. Тождества arctg(-a) = ..., arcctg(-a) = ..., '
     '(с доказательствами)',
 ]
 
@@ -85,3 +85,4 @@ first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra)
 if col2.button('Сгенерировать билет'):
     element1.write(geom[first_number])
     element2.write(algebra[second_number])
+g
