@@ -76,10 +76,10 @@ algebra = [
     '23. Функция f(x) = arctg(x), f(x) = arcctg(x) их свойства и график. Тождества arctg(-a) = ..., arcctg(-a) = ..., '
     '(с доказательствами)',
 ]
+
 element = st.text('Нажмите кнопку, чтобы сгненерировать')
 col1, col2, col3 = st.columns(3)
 col2.empty()
+first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra) - 1)
 if col2.button('Сгенерировать билет'):
-    element.write(geom[randint(0, len(geom) - 1)] + '\n' + algebra[randint(0, len(algebra) - 1)])
-
-
+    element.write(geom[first_number] + '\n' + algebra[second_number])
