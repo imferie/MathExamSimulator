@@ -77,7 +77,7 @@ algebra = [
     '(с доказательствами)',
 ]
 
-element = st.text('Нажмите кнопку, чтобы сгненерировать')
+element = st.text('Нажмите кнопку, чтобы сгенерировать')
 col1, col2, col3 = st.columns(3)
 col2.empty()
 first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra) - 1)
