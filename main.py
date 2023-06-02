@@ -77,9 +77,11 @@ algebra = [
     '(с доказательствами)',
 ]
 
-element = st.text('Нажмите кнопку, чтобы сгенерировать')
+element1 = st.text('Нажмите кнопку, чтобы сгенерировать')
+element2 = st.empty()
 col1, col2, col3 = st.columns(3)
 col2.empty()
 first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra) - 1)
 if col2.button('Сгенерировать билет'):
-    element.write(geom[first_number] + '\n' + algebra[second_number])
+    element1.write(geom[first_number])
+    element2.write(algebra[second_number])
