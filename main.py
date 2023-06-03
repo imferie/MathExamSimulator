@@ -2,8 +2,8 @@ from random import randint
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(layout="centered", page_icon="📄", page_title="Сессия")
-st.header('📄 Генератор билетов')
+st.set_page_config(layout="wide", page_icon="📄", page_title="Сессия")
+st.header('📄 Сессия по математике')
 
 geom = [
     '1. Группы преобразований и движений плоскости.',
@@ -76,12 +76,25 @@ algebra = [
     '25. Функция f(x) = arctg(x), f(x) = arcctg(x) их свойства и график. Тождества arctg(-a) = ..., arcctg(-a) = ..., '
     '(с доказательствами)',
 ]
+tab1, tab2 = st.tabs(["Генератор билетов", "Список билетов"])
 
-element1 = st.text('Нажмите кнопку, чтобы сгенерировать')
-element2 = st.empty()
-col1, col2, col3 = st.columns(3)
-col2.empty()
-first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra) - 1)
-if col2.button('Сгенерировать билет'):
-    element1.write(geom[first_number])
-    element2.write(algebra[second_number])
+with tab1:
+    element1 = st.text('Нажмите кнопку, чтобы сгенерировать')
+    element2 = st.empty()
+    col1, col2, col3 = st.columns(3)
+    col2.empty()
+    first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra) - 1)
+    if col2.button('Сгенерировать билет'):
+        element1.write(geom[first_number])
+        element2.write(algebra[second_number])
+
+with tab2:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader('Билеты по геометрии')
+        for elem in geom:
+            st.write(elem)
+    with col2:
+        st.subheader('Билеты по алгебре')
+        for elem in algebra:
+            st.write(elem)
