@@ -1,9 +1,9 @@
 from random import randint
 import streamlit as st
-import pandas as pd
 
 st.set_page_config(layout="wide", page_icon="📄", page_title="Сессия")
 st.header('📄 Сессия по математике')
+tab1, tab2, tab3 = st.tabs(["Генератор билетов", "Список билетов", "Повторить один предмет (билеты не повторяются)"])
 
 geom = [
     '1. Группы преобразований и движений плоскости.',
@@ -76,17 +76,13 @@ algebra = [
     '25. Функция f(x) = arctg(x), f(x) = arcctg(x) их свойства и график. Тождества arctg(-a) = ..., arcctg(-a) = ..., '
     '(с доказательствами)',
 ]
-tab1, tab2 = st.tabs(["Генератор билетов", "Список билетов"])
 
 with tab1:
     element1 = st.text('Нажмите кнопку, чтобы сгенерировать')
     element2 = st.empty()
-    col1, col2, col3 = st.columns(3)
-    col2.empty()
-    first_number, second_number = randint(0, len(geom) - 1), randint(0, len(algebra) - 1)
-    if col2.button('Сгенерировать билет'):
-        element1.write(geom[first_number])
-        element2.write(algebra[second_number])
+    if st.button('Сгенерировать билет'):
+        element1.write(geom[randint(0, len(geom) - 1)])
+        element2.write(algebra[randint(0, len(algebra) - 1)])
 
 with tab2:
     col1, col2 = st.columns(2)
